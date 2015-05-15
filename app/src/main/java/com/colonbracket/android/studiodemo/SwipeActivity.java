@@ -3,7 +3,7 @@ package com.colonbracket.android.studiodemo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -20,7 +21,7 @@ public class SwipeActivity extends AppCompatActivity {
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
 	 * fragments for each of the sections. We use a
-	 * {@link FragmentPagerAdapter} derivative, which will keep every
+	 * {@link FragmentStatePagerAdapter} derivative, which will keep every
 	 * loaded fragment in memory. If this becomes too memory intensive, it
 	 * may be best to switch to a
 	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
@@ -73,10 +74,10 @@ public class SwipeActivity extends AppCompatActivity {
 
 
 	/**
-	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
+	 * A {@link FragmentStatePagerAdapter} that returns a fragment corresponding to
 	 * one of the sections/tabs/pages.
 	 */
-	public class SectionsPagerAdapter extends FragmentPagerAdapter {
+	public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
 
 		public SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
@@ -91,8 +92,8 @@ public class SwipeActivity extends AppCompatActivity {
 
 		@Override
 		public int getCount() {
-			// Show 3 total pages.
-			return 3;
+			// Show N total pages.
+			return 10;
 		}
 
 		@Override
@@ -139,6 +140,9 @@ public class SwipeActivity extends AppCompatActivity {
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 								 Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_swipe, container, false);
+			TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+			Bundle args = getArguments();
+			textView.setText(Integer.toString(args.getInt(ARG_SECTION_NUMBER)));
 			return rootView;
 		}
 	}
