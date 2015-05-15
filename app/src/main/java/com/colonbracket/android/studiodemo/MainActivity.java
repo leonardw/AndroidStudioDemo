@@ -1,9 +1,11 @@
 package com.colonbracket.android.studiodemo;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -34,5 +36,24 @@ public class MainActivity extends ActionBarActivity {
 		}
 
 		return super.onOptionsItemSelected(item);
+	}
+
+	public void goDemo(View v) {
+		Class cls = null;
+		switch (v.getId()) {
+			case R.id.demo_swipe_view:
+				cls = SwipeActivity.class;
+				break;
+			case R.id.demo_action_bar_tab:
+				cls = TabActivity.class;
+				break;
+			case R.id.demo_action_bar_spinner:
+				cls = SpinnerActivity.class;
+				break;
+		}
+		if (cls != null) {
+			Intent intent = new Intent(this, cls);
+			startActivity(intent);
+		}
 	}
 }

@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Android Studio Demo</string>
+    <string name="swipe_view">Swipe Views (ViewPager)</string>
+    <string name="action_bar_tab">Action Bar Tabs (with ViewPager)</string>
+    <string name="action_bar_spinner">Action Bar Spinner</string>
 
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
