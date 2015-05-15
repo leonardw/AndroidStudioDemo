@@ -3,6 +3,7 @@
     <string name="swipe_view">Swipe Views (ViewPager)</string>
     <string name="action_bar_tab">Action Bar Tabs (with ViewPager)</string>
     <string name="action_bar_spinner">Action Bar Spinner</string>
+    <string name="fullscreen">Fullscreen</string>
 
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
@@ -13,4 +14,8 @@
     <string name="title_activity_swipe">SwipeActivity</string>
     <string name="title_activity_tab">TabActivity</string>
     <string name="title_activity_spinner">SpinnerActivity</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

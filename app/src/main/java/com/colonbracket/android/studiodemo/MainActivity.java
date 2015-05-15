@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
 			case R.id.demo_action_bar_spinner:
 				cls = SpinnerActivity.class;
 				break;
+			case R.id.demo_fullscreen:
+				cls = FullscreenActivity.class;
+				break;
 		}
 		if (cls != null) {
 			Intent intent = new Intent(this, cls);

@@ -27,5 +27,11 @@
         android:onClick="goDemo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/demo_fullscreen"
+        android:text="@string/fullscreen"
+        android:onClick="goDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
